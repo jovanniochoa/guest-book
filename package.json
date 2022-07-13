@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "(MIT AND Apache-2.0)",
   "scripts": {
-    "build": "npm run build:contract && npm run build:web",
+    "build": "npm run build:web",
       "build:contract": "cd contract && npm run build && mkdir -p ../out && cp ./out/main.wasm ../out/main.wasm",
       "build:web": "parcel build frontend/index.html --public-url ./",
     "deploy": "npm run build:contract && near dev-deploy",
